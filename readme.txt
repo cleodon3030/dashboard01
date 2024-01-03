@@ -1,1 +1,0 @@
-Projeto inicial de dashboard, utilizando o Streamlit.
