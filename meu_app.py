@@ -4,7 +4,7 @@ import pandas as pd
 st.set_page_config(page_title='Dashboard01')
 arquivo = 'c:/treinamento/streamlit/proj01/venv/resultados.csv'
 with st.container():
-    st.write('Meu primeiro site com stremlit 0.1.0.')
+    st.write('Meu primeiro site com stremlit 0.0.2.')
     st.title('Título')
     st.subheader('Subheader')
     st.write('Informações sobre os contratos fechados pela empresa Cleo S/A')
