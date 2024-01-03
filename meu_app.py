@@ -15,10 +15,11 @@ with st.container():
 @st.cache_data  
 def obter_dados():
 #    dados = pd.read_csv(arquivo)
+    dados = 'dados'
     return dados
-resultado = obter_dados()
-st.write(resultado)
+#resultado = obter_dados()
+#st.write(resultado)
 qtde_dias=st.selectbox('Selecione o período',['7d','15d','21d','30d'])
 numdias = int(qtde_dias.replace('d',''))
-filtro = resultado[-numdias:]
-st.area_chart(filtro,x='Data',y='Contratos')
+#filtro = resultado[-numdias:]
+#st.area_chart(filtro,x='Data',y='Contratos')
