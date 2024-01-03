@@ -4,7 +4,7 @@ import pandas as pd
 st.set_page_config(page_title='Dashboard01')
 arquivo = 'c:/treinamento/streamlit/proj01/venv/resultados.csv'
 with st.container():
-    st.write('Meu primeiro site com stremlit 0.0.2.')
+    st.write('Meu primeiro site com stremlit 0.0.3.')
     st.title('Título')
     st.subheader('Subheader')
     st.write('Informações sobre os contratos fechados pela empresa Cleo S/A')
@@ -14,12 +14,11 @@ with st.container():
 #--decorator está associado a uma função logo abaixo dele   
 @st.cache_data  
 def obter_dados():
-#    dados = pd.read_csv(arquivo)
-    dados = 'dados'
+    dados = pd.read_csv(arquivo)
     return dados
-#resultado = obter_dados()
-#st.write(resultado)
+resultado = obter_dados()
+st.write(resultado)
 qtde_dias=st.selectbox('Selecione o período',['7d','15d','21d','30d'])
 numdias = int(qtde_dias.replace('d',''))
-#filtro = resultado[-numdias:]
-#st.area_chart(filtro,x='Data',y='Contratos')
+filtro = resultado[-numdias:]
+st.area_chart(filtro,x='Data',y='Contratos')
